@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,51 @@
     <title>Institut Teknologi Sumatera</title>
 
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial;
+            font-family: Arial, sans-serif;
             background-color: azure;
             margin: 0;
         }
+
         header {
             background-color: #2196f3;
             color: white;
             text-align: center;
             padding: 25px;
         }
+
         .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-box {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 15px;
         }
-        .logo-box {
-            font-size: 30px;
-            font-weight: bold;
-            padding: 10px;
-        }
+
         .logo-box img {
             width: 100px;
             height: 100px;
+            object-fit: contain;
         }
+
+        .logo-box h1 {
+            margin: 0;
+            font-size: 32px;
+        }
+
         nav {
             background-color: white;
         }
+
         nav ul {
             list-style: none;
             margin: 0;
@@ -43,86 +60,196 @@
             display: flex;
             justify-content: center;
         }
+
         nav a {
             display: block;
-            padding: 12px;
+            padding: 12px 15px;
             color: #2196f3;
             text-decoration: none;
         }
+
         nav a:hover {
             background-color: #e3f2fd;
         }
+
         .hero {
             background-color: #2196f3;
             color: white;
             text-align: center;
             padding: 60px 20px;
         }
+
         .hero h2 {
             font-size: 35px;
+            margin-top: 0;
         }
+
+        .hero p {
+            font-size: 18px;
+        }
+
         .button {
+            display: inline-block;
             background-color: white;
             color: #2196f3;
             padding: 10px 20px;
             text-decoration: none;
+            border-radius: 4px;
         }
+
+        .button:hover {
+            background-color: #e3f2fd;
+        }
+
         .content-section {
             width: 80%;
+            max-width: 1000px;
             margin: 30px auto;
             background-color: white;
             padding: 25px;
         }
+
         .content-section h2 {
             color: #2196f3;
             border-bottom: 2px solid #2196f3;
             padding-bottom: 10px;
         }
+
         .cards {
-            display: block;
+            display: flex;
             gap: 20px;
+            flex-wrap: wrap;
         }
+
         .card {
-            flex: 1;
+            flex: 1 1 250px;
             background-color: #f5faff;
             border: 1px solid #ccc;
             padding: 20px;
         }
+
         .card h3 {
             color: #2196f3;
+            margin-top: 0;
         }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
         table {
             width: 100%;
             border-collapse: collapse;
+            min-width: 500px;
         }
+
         th {
             background-color: #2196f3;
             color: white;
             padding: 10px;
             text-align: left;
         }
+
         td {
             padding: 10px;
             border-bottom: 1px solid #ccc;
         }
+
         aside {
             width: 80%;
+            max-width: 1000px;
             margin: 30px auto;
             padding: 20px;
             background-color: #e3f2fd;
         }
+
         aside h2 {
             color: #2196f3;
         }
+
         aside a {
             color: #2196f3;
             text-decoration: none;
         }
+
         footer {
             background-color: #0d47a1;
             color: white;
             text-align: center;
             padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+
+            header {
+                padding: 15px;
+            }
+
+            .logo-box {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .logo-box img {
+                width: 70px;
+                height: 70px;
+            }
+
+            .logo-box h1 {
+                font-size: 22px;
+            }
+
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav a {
+                padding: 14px;
+                border-bottom: 1px solid #eeeeee;
+            }
+
+            .hero {
+                padding: 40px 15px;
+            }
+
+            .hero h2 {
+                font-size: 28px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .content-section {
+                width: 90%;
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            .content-section h2 {
+                font-size: 24px;
+            }
+
+            .cards {
+                flex-direction: column;
+            }
+
+            .card {
+                width: 100%;
+            }
+
+            aside {
+                width: 90%;
+                padding: 20px;
+                margin: 20px auto;
+            }
+
+            footer {
+                padding: 15px;
+                font-size: 14px;
+            }
         }
     </style>
 </head>
@@ -133,7 +260,8 @@
         <div class="logo">
             <div class="logo-box">
                 <img src="gambar/image 1.png" alt="Logo ITERA">
-            <h1>Institut Teknologi Sumatera</h1>
+                <h1>Institut Teknologi Sumatera</h1>
+            </div>
         </div>
     </header>
 
@@ -174,6 +302,7 @@
     </section>
 
     <section id="tentang" class="content-section">
+
         <h2>Tentang ITERA</h2>
 
         <p>
@@ -181,16 +310,21 @@
             tinggi negeri yang berada di Provinsi Lampung dan berfokus
             pada bidang teknologi.
         </p>
+
     </section>
 
     <section id="fakultas" class="content-section">
+
         <h2>Fakultas</h2>
 
         <div class="cards">
 
             <div class="card">
                 <h3>FTI</h3>
-                <h4>Fakultas Teknologi Industri</h4>
+
+                <h4>
+                    Fakultas Teknologi Industri
+                </h4>
 
                 <p>
                     Mempelajari bidang teknologi dan industri.
@@ -199,6 +333,7 @@
 
             <div class="card">
                 <h3>FTIK</h3>
+
                 <h4>
                     Fakultas Teknologi Infrastruktur dan Kewilayahan
                 </h4>
@@ -210,7 +345,10 @@
 
             <div class="card">
                 <h3>FS</h3>
-                <h4>Fakultas Sains</h4>
+
+                <h4>
+                    Fakultas Sains
+                </h4>
 
                 <p>
                     Mempelajari berbagai bidang ilmu sains.
@@ -218,42 +356,50 @@
             </div>
 
         </div>
+
     </section>
 
     <section class="content-section">
+
         <h2>Informasi Kampus</h2>
 
-        <table>
+        <div class="table-container">
 
-            <tr>
-                <th>Informasi</th>
-                <th>Keterangan</th>
-            </tr>
+            <table>
 
-            <tr>
-                <td>Nama</td>
-                <td>Institut Teknologi Sumatera</td>
-            </tr>
+                <tr>
+                    <th>Informasi</th>
+                    <th>Keterangan</th>
+                </tr>
 
-            <tr>
-                <td>Singkatan</td>
-                <td>ITERA</td>
-            </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>Institut Teknologi Sumatera</td>
+                </tr>
 
-            <tr>
-                <td>Provinsi</td>
-                <td>Lampung</td>
-            </tr>
+                <tr>
+                    <td>Singkatan</td>
+                    <td>ITERA</td>
+                </tr>
 
-            <tr>
-                <td>Fakultas</td>
-                <td>FTI, FTIK, dan FS</td>
-            </tr>
+                <tr>
+                    <td>Provinsi</td>
+                    <td>Lampung</td>
+                </tr>
 
-        </table>
+                <tr>
+                    <td>Fakultas</td>
+                    <td>FTI, FTIK, dan FS</td>
+                </tr>
+
+            </table>
+
+        </div>
+
     </section>
 
     <aside>
+
         <h2>Berita Terbaru</h2>
 
         <p>
@@ -263,16 +409,21 @@
         <a href="berita.html">
             Lihat berita selengkapnya
         </a>
+
     </aside>
 
     <footer id="kontak">
+
         <p>
-        2026 Institut Teknologi Sumatera
+            2026 Institut Teknologi Sumatera
         </p>
 
         <p>
             Website sederhana ITERA
         </p>
+
     </footer>
 
 </body>
+
+</html>
